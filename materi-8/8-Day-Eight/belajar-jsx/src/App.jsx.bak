@@ -1,0 +1,14 @@
+import {useState } from "react";
+
+function App() {
+  const [angka, setAngka] = useState(0) 
+
+  return(
+    <div>
+      <h1>Angka sekarang: {angka}</h1>
+      <button onClick={() => setAngka(angka + 1)}>Tambah angka</button>
+    </div>
+  )
+}
+
+export default App;
