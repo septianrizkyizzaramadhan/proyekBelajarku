@@ -1,0 +1,38 @@
+// ambil data pengguna dari API 
+
+import { useState, useEffect } from "react";
+
+function App() {
+    const [user, setUser] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then((respone) => respone.json())
+            .then((data) => {
+                setUser(data)
+                setLoading(false)
+            })
+            .catch((err) => console.error('gagal mengambil data!:', err))
+    }, [])
+
+    return(
+        <div>
+            <h2>Daftar pengguna</h2>
+            {loading ? (
+                <p>sedang memuat...</p>
+            ) : (
+                <ul>
+                    {user.map((user) => (
+                        <li key={user.id}>
+                            <strong>{user.name}</strong> ({user.email})
+                        </li>
+                    ))}
+                </ul>
+            )}
+        </div>
+    )
+
+}
+
+export default App
