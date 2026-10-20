@@ -1,0 +1,56 @@
+import { useState } from 'react';
+
+function App() {
+  // 1. Data servis sekarang kita taruh di STATE, supaya bisa diubah-ubah!
+  const [dataServis, setDataServis] = useState([
+    { id: 1, nama: "Honda BeAT", mekanik: "Budi", status: "Proses" },
+    { id: 2, nama: "Yamaha NMAX", mekanik: "Andi", status: "Proses" },
+    { id: 3, nama: "Honda Vario", mekanik: "Budi", status: "Selesai" },
+  ]);
+
+  // 🛠️ FUNGSI YANG HARUS LU LENGKAPI:
+  const handleSelesaikanServis = (idYangMauDiubah) => { 
+    // Petunjuk logika:
+    // Gunakan .map() untuk melintasi dataServis.
+    // Jika item.id sama dengan idYangMauDiubah, buat objek baru dengan status "Selesai".
+    // Jika tidak sama, kembalikan item aslinya tanpa diubah.
+    
+    const dataBaru = dataServis.map((item) => {
+        if (item.id === idYangMauDiubah){
+            return {...item, status: 'selesai'}
+        }
+        return item;
+        // ✍️ TULIS LOGIKA LU DI SINI:
+      
+    });
+
+    // Masukkan data baru ke state
+    setDataServis(dataBaru);
+  };
+
+  return (
+    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
+      <h2>🛠️ Panel Kontrol Servis Bengkel</h2>
+
+      <ul>
+        {dataServis.map((item) => (
+          <li key={item.id} style={{ marginBottom: '12px' }}>
+            <strong>{item.nama}</strong> | Mekanik: {item.mekanik} | Status: <em>{item.status}</em>
+            
+            {/* Tombol ini akan memanggil fungsi di atas dengan membawa id motor */}
+            {item.status === "Proses" && (
+              <button 
+                onClick={() => handleSelesaikanServis(item.id)}
+                style={{ marginLeft: '10px', padding: '4px 8px', cursor: 'pointer' }}
+              >
+                Tandai Selesai
+              </button>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default App;
