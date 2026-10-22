@@ -18,9 +18,9 @@ function App() {
                 return {...item, status: '<Sel></Sel>esai'}
             }
             return item;
-        })
-        setAntrean(dataBaru)
-    };
+          })
+          setAntrean(dataBaru)
+      };
 return (
     <div style={{ padding: '30px', fontFamily: 'sans-serif' }}>
       <h2>🛠️ Dashboard Antrean Bengkel Genesis</h2>
@@ -57,7 +57,7 @@ return (
                 </button>
               )}
 
-              {/* Tombol Hapus */}
+              {/* Tombol Hapus */
               <button 
                 onClick={() => handleHapus(item.id)}
                 style={{ padding: '6px 10px', cursor: 'pointer', background: '#f44336', color: 'white', border: 'none', borderRadius: '4px' }}
