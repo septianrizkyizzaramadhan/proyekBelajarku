@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///home/revy/ProjectRevyWebDev/Coding%20sambil%20ngonten........./materi-8/8-Day-Eight/project/app/page.jsx"],"sourcesContent":["// app/page.jsx\nimport QuickCatalog from \"@/components/QuickCatalog\";\n\nexport default function Home() {\n  return (\n    <main className=\"min-h-screen bg-slate-50 py-10\">\n      <QuickCatalog />\n    </main>\n  );\n}"],"names":["Home","className","QuickCatalog"],"mappings":"AAAA,eAAe;;;;;;;;;;;;;AAGA,SAASA;IACtB,qBACE,8OAAC;QAAKC,WAAU;kBACd,cAAA,8OAACC;;;;;;;;;;AAGP"}}]
+}

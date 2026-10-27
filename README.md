@@ -79,3 +79,4 @@ yang pertama gw pelajari itu ada :
 #### WELCOME TO DAY EIGHT 
 HELLLOOOOOOWWWWW hari ke 8 welcome react.js xixixi. 
 hi guys akhirnya gw sampai ke tahap react.js hahaha antara bingung dan senang. di sini gw bakal belajar tentang dasar react terlebih dahulu jadi aku cuman tulis sedikit saja 
+ 
