@@ -10,7 +10,7 @@ let userWallet = {
     userId: 'revy_01',
     name: 'revy', 
     balance: 2000000,
-    currency: 'IDR'
+    currency: 'IDR' 
 }
 
 app.get('/api/wallet', (req: Request, res: Response) => {
