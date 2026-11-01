@@ -54,6 +54,8 @@ app.post('/api/tasks', (Req: Request, Res: Response) => {
         priority: priority || 'LOW'
     }
 
+    tasks.push(newTask)
+
     Res.status(201).json({
         success: true, 
         data: newTask
