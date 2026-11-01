@@ -35,31 +35,6 @@ app.get('/api/tasks/:id', (Req: Request, Res: Response) => {
     })
 })
 
-app.post('/api/tasks', (Req: Request, Res: Response) => {
-    const {title, priority} = Req.body
-
-    if (!title || typeof title !== 'string') {
-        return Res.status(400).json({
-            status: false,
-            message: 'title harap di isi!'
-        })
-    }
-
-    const newTasks = {
-        id: tasks.length + 1,
-        title: title,
-        complate: false, 
-        priority: priority || 'LOW'
-    }
-
-    tasks.push(newTasks)
-
-    Res.status(201).json({
-        status: true,
-        data: newTasks
-    })
-})
-
 app.patch('/api/tasks/:id', (Req: Request, Res: Response) => {
     const taskId = Number(Req.params.id)
     const {title, complate, priority} = Req.body
