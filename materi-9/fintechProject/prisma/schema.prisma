@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  balance   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  // Relasi transaksi
+  sentTransactions     Transaction[] @relation("Sender")
+  receivedTransactions Transaction[] @relation("Receiver")
+}
+
+model Transaction {
+  id         Int             @id @default(autoincrement())
+  senderId   Int?
+  receiverId Int?
+  amount     Int
+  type       TransactionType
+  createdAt  DateTime        @default(now())
+
+  sender   User? @relation("Sender", fields: [senderId], references: [id])
+  receiver User? @relation("Receiver", fields: [receiverId], references: [id])
+}
+
+enum TransactionType {
+  TOPUP
+  TRANSFER
+}
