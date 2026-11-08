@@ -1,0 +1,28 @@
+datasource db {
+  provider = "postgresql"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Order {
+  id          Int    @id @default(autoincrement())
+  userId      Int    @map("user_id")
+  productName String @map("product_name") @db.VarChar(100)
+  totalPrice  Int    @map("total_price")
+  
+  user        User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("orders")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  email     String   @unique @db.VarChar(100)
+  password  String   @db.VarChar(255)
+  orders    Order[]  // Sekarang Order sudah dikenal karena ada di atasnya
+
+  @@map("users")
+}
