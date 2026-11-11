@@ -1,48 +1,40 @@
 
 function getUser() {
-  // TODO: Return Promise
-
   return new Promise((resolve) => {
-    resolve({
+    setTimeout(() => {
+      resolve({
         id: 1,
-        name: 'revy'
-    })
-  })
+        name: "revy"
+      });
+    }, 2000);
+  });
 }
 
 function getUserPosts() {
-
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve([
-                {
-                    id: 2,
-                    name: 'riko'
-                },
-                {
-                    id: 3,
-                    name: 'rido'
-                }
-            ])
-        }, 1000);
-    })
-  // TODO: Return Promise
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { id: 2, name: "riko" },
+        { id: 3, name: "rido" }
+      ]);
+    }, 3000);
+  });
 }
 
 async function main() {
-  console.log('mengambil data...')
-    try {
-        const user = await getUser() 
-        const post = await getUserPosts()
-        console.log(user)
-        console.log(post)
+  console.log("Mengambil data...");
 
-    // TODO: Ambil data user
-    // TODO: Ambil data posts
-    // TODO: Tampilkan hasil
+  try {
+    const [user, posts] = await Promise.all([
+      getUser(),
+      getUserPosts()
+    ]);
+
+    console.log("User:", user);
+    console.log("Posts:", posts);
+
   } catch (error) {
-    console.error(error.message)
-    // TODO: Handle error
+    console.error(error);
   }
 }
 
