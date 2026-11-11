@@ -1,14 +1,17 @@
-function getUserPosts() {
-  return new Promise((resolve) => {
-    resolve([
-      {
-        id: 1,
-        title: "Belajar Backend"
-      },
-      {
-        id: 2,
-        title: "Belajar Node.js"
-      }
-    ]);
-  });
+function getUser() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve({
+                id: 1,
+                name: 'revy'
+            })
+        }, 1000);
+    })
 }
+
+async function  main() {
+    console.log('mengambil data...')
+    const user = await getUser()
+    console.log(user)
+}
+main()
