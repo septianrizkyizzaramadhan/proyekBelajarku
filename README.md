@@ -80,3 +80,28 @@ yang pertama gw pelajari itu ada :
 HELLLOOOOOOWWWWW hari ke 8 welcome react.js xixixi. 
 hi guys akhirnya gw sampai ke tahap react.js hahaha antara bingung dan senang. di sini gw bakal belajar tentang dasar react terlebih dahulu jadi aku cuman tulis sedikit saja 
  
+
+ 
+### MATERI TEN – BACKEND DEVELOPMENT
+
+**12 November 2026**
+
+Di materi ke-10 ini gw melakukan penguatan (*reinforcement*) terhadap JavaScript Fundamental dan Asynchronous JavaScript sebagai persiapan memasuki Backend Development.
+
+**Materi yang diperkuat:**
+- **JavaScript Fundamental:** Review Array, Object, Function, Conditional, Data Validation, serta Array Methods seperti `map()`, `filter()`, `reduce()`, dan `find()`.
+- **Asynchronous JavaScript:** Memahami kembali Promise, `resolve`, `reject`, `async/await`, `try...catch`, serta Promise Methods seperti `Promise.all()` dan lainnya.
+- **Praktik:** Membuat Promise sendiri, mengambil data API menggunakan `fetch()`, menangani error, dan memahami penggunaan Promise pada PostgreSQL (`pg`).
+
+**Catatan Penting:**
+
+Memperkuat pemahaman tentang proses asynchronous, cara kerja Promise, serta penanganan error dalam JavaScript.
+
+**Rencana Materi Selanjutnya:**
+- Node.js Runtime
+- Node.js Modules
+- File System
+- Path
+- Event Loop
+
+**Fokus berikutnya: Node.js Core**
