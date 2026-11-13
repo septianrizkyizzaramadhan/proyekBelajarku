@@ -135,16 +135,41 @@ Di materi ke-10 ini gw melakukan penguatan (*reinforcement*) terhadap JavaScript
 - **Asynchronous JavaScript:** Memahami kembali Promise, `resolve`, `reject`, `async/await`, `try...catch`, serta Promise Methods seperti `Promise.all()` dan lainnya.
 - **Praktik:** Membuat Promise sendiri, mengambil data API menggunakan `fetch()`, menangani error, dan memahami penggunaan Promise pada PostgreSQL (`pg`).
 
-### Catatan Penting
+---
 
-Memperkuat pemahaman tentang proses asynchronous, cara kerja Promise, serta penanganan error dalam JavaScript.
+## MATERI ELEVENT
 
-### Rencana Materi Selanjutnya
+Project latihan sederhana untuk memahami penggunaan **CommonJS Modules** di Node.js.
 
-- Node.js Runtime
-- Node.js Modules
-- File System
-- Path
-- Event Loop
+## Struktur Project
 
-**Fokus berikutnya: Node.js Core**
+```text
+project/
+├── index.js
+├── user.js
+└── produk.js
+```
+
+## Materi yang Dipelajari
+
+- `module.exports` untuk mengekspor fungsi.
+- `require()` untuk mengimpor fungsi dari file lain.
+- Menggunakan fungsi dari module berbeda.
+
+## Menjalankan Project
+
+Jalankan melalui terminal:
+
+```bash
+node index.js
+```
+
+## Tujuan
+
+Memahami bagaimana memisahkan kode ke beberapa file agar lebih terstruktur dan mudah digunakan kembali.
+
+---
+
+**Learning:** Node.js Fundamentals  
+**Focus:** CommonJS Modules  
+**Status:** Completed
