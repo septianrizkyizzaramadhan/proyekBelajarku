@@ -6,7 +6,7 @@ const users = [
 
 // all user
 function getAllUsers() {
-    users = [...users]
+    return users
 }
 console.log('SEMUA USER: ')
 console.log(users)
@@ -19,16 +19,26 @@ console.log('\n id yang dicari: ')
 console.log(getUserById(users, 2))
 
 // create user
+const user = []
 function createUser(id, name, age, isActive) {
-    return {
+    const idExit = user.some(user => user.id === id)
+    if (idExit === id) {
+        throw new Error('ID sudah digunakan, gunakan ID lain!')
+    } 
+
+    const newUser = {
         id,
         name, 
         age,
         isActive
     }
+
+    user.push(newUser)
+    return newUser
+
 }
 console.log('\n create user:')
-console.log(createUser(4, 'rusdi', 19, true))
+console.log(createUser(1, 'rusdi', 19, true))
 
 // user aktif filter
 function userActive() {
