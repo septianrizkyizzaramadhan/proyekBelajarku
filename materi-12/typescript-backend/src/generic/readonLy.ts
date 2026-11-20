@@ -10,6 +10,6 @@ const produk: Readonly<product> = {
     price: 12000000
 }
 
-produk.id = 2
+produk.id = 2 // error yang terdeteksi 
 
 console.log(produk)
