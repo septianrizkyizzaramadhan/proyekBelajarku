@@ -12,7 +12,7 @@ interface product {
 
 const response: ApiResponse<product> = {
     success: true,
-    message: '',
+    message: 'dddd',
     data: {
         id: 1,
         name: 'handphone',
